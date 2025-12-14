@@ -16,10 +16,11 @@ Most static analysis tools are dumb. They grep for strings. ASTRA builds a compl
 
 - **☢️ Blast Radius**: If I touch `utils.rs`, how many files break? (Impact Analysis)
 - **🧟 Zombie Code**: What code are we paying to maintain that is _never called_? (Efficiency)
-- **👔 Executive Report**: A "Boardroom Ready" HTML dashboard with a single Health Score (0-100).
+- **🎯 The Spotlight**: Don't fix everything. Fix the Top 3 files that matter (Churn + Risk).
+- **📝 Maintenance Grade**: A simple A-F grade for your project's health. Not fake money.
 - **🧠 Neural Interface**: Interactive D3.js visualization of your code's brain.
 
-### Supported Languages (v1.1.0)
+### Supported Languages (v2.0.0)
 
 ASTRA Hyper-Intelligence Engine currently supports deep semantic analysis for:
 
@@ -30,7 +31,7 @@ ASTRA Hyper-Intelligence Engine currently supports deep semantic analysis for:
 | 🐹 **Go**        | ☕ **Java**       | 🐚 **Bash**     |
 | ⚡ **C++**       | ⚛️ **HTML/CSS**   | 🐘 **Kotlin**   |
 
-_(Tier 4 support for C#, Ruby, Swift, PHP, Solidity, and SQL arriving in v1.2)_
+_(Tier 4 support for C#, Ruby, Swift, PHP, Solidity, and SQL arriving in v2.1)_
 
 ## Features & Pricing
 
@@ -38,20 +39,17 @@ _(Tier 4 support for C#, Ruby, Swift, PHP, Solidity, and SQL arriving in v1.2)_
 | :------------------------------ | :------------------: | :----------: |
 | **Basic Audit**                 |          ✅          |      ✅      |
 | **Zombie Code Detection**       |          ✅          |      ✅      |
-| **CLI Output**                  |          ✅          |      ✅      |
-| **Blast Radius Analysis**       |          ❌          |      ✅      |
+| **Maintenance Grades (A-F)**    |          ✅          |      ✅      |
+| **The Spotlight (Top 3)**       |          ✅          |      ✅      |
 | **Deep Semantics (12 Langs)**   |          ✅          |      ✅      |
 | **Git Forensics (The Prophet)** |          ❌          |      ✅      |
 | **The Holodeck (3D Report)**    |      🔒 Locked       |      ✅      |
 | **The Gatekeeper (CI/CD)**      |      🔒 Locked       |      ✅      |
-| **The CFO (Dynamic Debt)**      |      🔒 Locked       |      ✅      |
 | **The Purist (AST Complexity)** |      🔒 Locked       |      ✅      |
 | **The Doppelgänger (Dupes)**    |      🔒 Locked       |      ✅      |
 | **The Time Machine (Trends)**   |      🔒 Locked       |      ✅      |
-| **The League (Gamification)**   |      🔒 Locked       |      ✅      |
 | **The Cortex (Local AI)**       |      🔒 Locked       |      ✅      |
 | **The Architect (AI Reports)**  |      🔒 Locked       |      ✅      |
-| **The Summoner (Auto-Install)** |      🔒 Locked       |      ✅      |
 
 ---
 
@@ -61,7 +59,7 @@ ASTRA is a standalone CLI application. It runs locally on your machine—your co
 
 ### Quick Install (Mac / Linux / Windows)
 
-One command to rule them all. Detects your OS, verifies architecture, and automatically builds from source if a pre-compiled binary is incompatible (e.g., ARM64 Linux).
+One command to rule them all. Detects your OS, verifies architecture, and automatically builds from source if a pre-compiled binary is incompatible.
 
 **Linux / macOS**
 ```bash
@@ -70,12 +68,6 @@ curl -fsSL https://raw.githubusercontent.com/DrSkyle/ASTRA-Releases/main/install
 *Supports: x86_64, aarch64 (M1/M2/M3), ARMv7*
 
 **Windows (PowerShell)**
-```powershell
-iwr https://raw.githubusercontent.com/DrSkyle/ASTRA-Releases/main/install.ps1 -useb | iex
-```
-
-### Windows (PowerShell)
-
 ```powershell
 iwr https://raw.githubusercontent.com/DrSkyle/ASTRA-Releases/main/install.ps1 -useb | iex
 ```
@@ -113,7 +105,7 @@ Go to any project folder and run:
 astra scan
 ```
 
-This will generate a quick terminal summary of your project's health.
+This will generate a quick terminal summary of your project's health using the **Spotlight Engine**.
 
 ### 2. Upgrade to Pro
 
@@ -123,38 +115,18 @@ To unlock the **Neural Interface** and **Executive Report**, buy a license:
 astra buy
 ```
 
-# 2. Ask The Oracle
-
-astra ask "Why is the Risk Score so low?"
-
-# 3. The Architect (AI Executive Summary)
-
-# Automatically embedded in the HTML report when Ollama is active.
-
-astra scan --html
-
-### 4. The Neural Link (VS Code Extension)
-
-Real-time risk analysis as you type.
-
-1. Install the Extension manually or via VS Code marketplace (coming soon).
-2. Press `F5` to investigate your code in real-time.
-
-### 5. Activate License
-
-Once you have your key (check your email), unlock the power:
+### 3. Ask The Oracle
 
 ```bash
-astra activate sk_YOUR_KEY_HERE
+astra ask "Why is the Maintenance Grade only a C?"
 ```
 
-### 5. Configure Financials ("The CFO")
+### 4. The Architect (AI Executive Summary)
 
-Tell ASTRA how much you pay your developers to get accurate debt calculations:
+Automatically embedded in the HTML report when Ollama is active.
 
 ```bash
-astra config
-# Prompts for: Currency, Hourly Rate, and Time-to-Fix estimates.
+astra scan --html
 ```
 
 ### 5. Generate Holodeck Report ("Genius Mode")
@@ -164,7 +136,6 @@ Visualize your codebase as a 3D neural network. Files that change often and are 
 ```bash
 astra scan --html --output report.pdf
 ```
-
 _Opens `astra-report.html` in your browser._
 
 ### 6. Set up CI/CD ("The Gatekeeper")
