@@ -108,4 +108,10 @@ fi
 chmod +x "$TARGET"
 
 echo "🚀 Installation Complete!"
-echo "Run 'astra help' to get started."
+echo ""
+echo " IMPORTANT: restarting your terminal is required for changes to take effect."
+echo " Or run one of these commands explicitly:"
+echo "    source ~/.bashrc   # for bash users"
+echo "    source ~/.zshrc    # for zsh users"
+echo ""
+echo "Then run 'astra help' to start."
