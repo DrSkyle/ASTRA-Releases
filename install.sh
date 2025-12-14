@@ -12,7 +12,14 @@ BASE_URL="https://raw.githubusercontent.com/$REPO/main"
 
 case "$OS" in
     Linux)
-        FILE="astra-linux"
+        case "$ARCH" in
+            x86_64) FILE="astra-linux" ;;
+            aarch64|arm64) FILE="astra-linux-aarch64" ;;
+            *)
+                echo "⚠️  Unsupported Linux architecture: $ARCH. Will attempt source build..."
+                FILE="astra-linux-source-fallback" 
+                ;;
+        esac
         ;;
     Darwin)
         FILE="astra-macos"
